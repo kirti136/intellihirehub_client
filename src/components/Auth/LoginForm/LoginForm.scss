@@ -1,0 +1,73 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 225);
+}
+
+.loginSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 1rem 1rem 1rem;
+
+  .loginDiv {
+    padding: 3rem 5rem;
+    border-radius: 10px;
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      .input {
+        width: 25rem;
+
+        input {
+          height: 40px;
+          width: 100%;
+          outline: none;
+          border: none;
+          padding: 1.5rem 1rem;
+          background: var(--whiteColor);
+          border-radius: 5px;
+        }
+      }
+
+      .btn {
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    .questionDiv {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .loginSection {
+    .loginDiv {
+      padding: 0;
+      width: 80%;
+      margin: auto;
+      form {
+        .input {
+          width: 100%;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

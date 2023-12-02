@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 import "./RegisterForm.css"
+
+
 const RegisterForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -51,6 +55,9 @@ const RegisterForm = () => {
           <br /><br />
           <input className="btn flex" type="submit" value="Register" />
         </form>
+        <div className='questionDiv'>
+          <p>Already Registered? <Link to={"/login"}>Login</Link></p>
+        </div>
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </div>
     </section>

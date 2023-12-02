@@ -46,6 +46,10 @@
   margin: auto;
   text-align: center;
 }
+.registerSection .inputDiv .questionDiv {
+  text-align: center;
+  margin-top: 1rem;
+}
 
 @media screen and (max-width: 769px) {
   .registerSection .inputDiv {
