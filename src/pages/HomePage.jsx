@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import LogoutButton from '../components/Auth/LogoutButton/LogoutButton';
 
 const HomePage = () => {
     const [userDetails, setUserDetails] = useState(null);
@@ -38,7 +37,6 @@ const HomePage = () => {
                 <p>Loading user details...</p>
             )}
 
-            <LogoutButton />
         </div>
     );
 };
