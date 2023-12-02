@@ -68,8 +68,8 @@ function Navbar() {
               </Link>
             </li>
             <li className="navItem">
-              <Link to={"/"} className="navLink a">
-                Contact
+              <Link to={"/profile"} className="navLink a">
+                Profile
               </Link>
             </li>
 

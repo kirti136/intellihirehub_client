@@ -1,0 +1,71 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --gradientColorButton: linear-gradient(
+    to right,
+    hsl(0, 0%, 37%),
+    hsl(0, 2%, 9%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 225);
+}
+
+.profileSection {
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 8rem 1rem 5rem 1rem;
+}
+.profileSection .profileDiv {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+.profileSection .profileDiv .details p {
+  margin-bottom: 8px;
+}
+.profileSection .profileDiv .details .btn {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  color: white;
+  font-size: medium;
+  background: var(--gradientColorButton);
+}
+.profileSection .profileDiv .editForm label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+.profileSection .profileDiv .editForm input {
+  width: 30%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+.profileSection .profileDiv .editForm .btnDiv {
+  display: flex;
+  position: absolute;
+  top: 150px;
+  right: 40px;
+  gap: 10px;
+}
+.profileSection .profileDiv .editForm .btnDiv .btn {
+  color: white;
+  font-size: medium;
+  background: var(--gradientColorButton);
+}/*# sourceMappingURL=profile.css.map */
