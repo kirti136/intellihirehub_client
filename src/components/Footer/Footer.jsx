@@ -31,7 +31,7 @@ function Footer() {
       </div>
 
       <div className="secContent container">
-        <div data-aos="fade-up" className="contactDiv flex">
+        <div className="contactDiv flex">
           <div className="text">
             <small>KEEP IN TOUCH</small>
             <h2>Fly with us</h2>
@@ -39,11 +39,11 @@ function Footer() {
 
           <div className="inputDiv flex">
             <input
-              data-aos="fade-up"
+
               type="text"
               placeholder="Enter Email Address"
             />
-            <button data-aos="fade-up" className="btn flex" type="submit">
+            <button className="btn flex" type="submit">
               SEND <FiSend className="icon" />
             </button>
           </div>
@@ -55,15 +55,15 @@ function Footer() {
             {/* Logo */}
             <div className="logoDiv">
               <Link to={"/"} className="a logo flex">
-              <GiDodge className="icon" />ntelliHireHub.
+                <GiDodge className="icon" />ntelliHireHub.
               </Link>
             </div>
             {/* Paragraph */}
-            <div data-aos="fade-up" className="footerParagraph">
+            <div className="footerParagraph">
               <p>Our job portal streamlines recruitment, connecting job seekers and employers for efficient hiring. We aim to redefine job search experiences by fostering meaningful connections and facilitating seamless talent acquisition.</p>
             </div>
             {/* Socials */}
-            <div data-aos="fade-up" className="footerSocials flex">
+            <div className="footerSocials flex">
               <FaTwitter className="icon" />
               <FaYoutube className="icon" />
               <FaInstagramSquare className="icon" />
@@ -76,7 +76,7 @@ function Footer() {
             {/* Group 01 */}
             <div
               // data-aos-duration="2000"
-              data-aos="fade-up"
+
               className="linkGroup"
             >
               <span className="groupTitle">OUR AGENCY</span>
@@ -110,7 +110,7 @@ function Footer() {
             {/* Group 02 */}
             <div
               // data-aos-duration="2000"
-              data-aos="fade-up"
+
               className="linkGroup"
             >
               <span className="groupTitle">PARTNERS</span>
@@ -144,7 +144,7 @@ function Footer() {
             {/* Group 03 */}
             <div
               // data-aos-duration="2000"
-              data-aos="fade-up"
+
               className="linkGroup"
             >
               <span className="groupTitle">LAST MINUTE</span>

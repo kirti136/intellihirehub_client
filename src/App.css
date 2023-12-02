@@ -68,8 +68,10 @@ li {
   border: none;
   outline: none;
   cursor: pointer;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
 }
-
 .btn .a {
   color: var(--whiteColor);
   font-weight: 500;
