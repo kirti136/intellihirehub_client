@@ -56,7 +56,7 @@ const RegisterForm = () => {
           <input className="btn flex" type="submit" value="Register" />
         </form>
         <div className='questionDiv'>
-          <p>Already Registered? <Link to={"/login"}>Login</Link></p>
+          <p>Already Registered? <Link className="navLink a" to={"/login"}>Login</Link></p>
         </div>
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </div>

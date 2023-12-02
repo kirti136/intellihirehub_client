@@ -39,7 +39,7 @@ const LoginForm = () => {
           <input className="btn flex" type="submit" value="Login" />
         </form>
         <div className='questionDiv'>
-          <p>New User? <Link to={"/register"}>Register</Link></p>
+          <p>New User? <Link className="navLink a" to={"/register"}>Register</Link></p>
         </div>
       </div>
     </section>
