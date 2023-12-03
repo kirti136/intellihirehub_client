@@ -67,7 +67,7 @@ const Profile = () => {
   };
 
   return (
-    <section className="profileSection">
+    <section className="profileSection content">
       {token ? (
         userDetails ? (
           <div className="profileDiv">

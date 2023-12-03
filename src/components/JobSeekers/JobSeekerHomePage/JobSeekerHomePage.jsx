@@ -1,7 +1,9 @@
 
 function JobSeekerHomePage() {
   return (
-    <div>JobSeekerHomePage</div>
+    <section className="content">
+        <div>JobSeekerHomePage</div>
+    </section>
   )
 }
 

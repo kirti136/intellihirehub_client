@@ -54,7 +54,7 @@ const CreateJobPosting = () => {
   };
 
   return (
-    <section className="createJobPostingSection">
+    <section className="createJobPostingSection content">
       <div className="jobPostingDiv">
         <h2>Create Job Posting</h2>
         <form onSubmit={handleSubmit}>

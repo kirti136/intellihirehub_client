@@ -120,12 +120,12 @@ function Navbar() {
                 </Link>
               </li>
               <li className="navItem">
-                <Link to={"/"} className="navLink a">
+                <Link to={"/create_job"} className="navLink a">
                   Create
                 </Link>
               </li>
               <li className="navItem">
-                <Link to={"/"} className="navLink a">
+                <Link to={"/individual_job_posts"} className="navLink a">
                   My Postings
                 </Link>
               </li>

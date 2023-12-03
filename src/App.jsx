@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ProfilePage from "./pages/ProfilePage";
 import CreateJobPosting from "./components/JobPostings/CreateJobPosting/CreateJobPosting";
+import IndividualJobPosts from "./components/JobPostings/IndividualJobPosts/IndividualJobPosts";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/create_job" element={<CreateJobPosting />} />
+        <Route path="/individual_job_posts" element={<IndividualJobPosts />} />
       </Routes>
       <Footer />
     </div>
