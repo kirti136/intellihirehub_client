@@ -3,10 +3,12 @@ import axios from "axios";
 
 const IndividualJobPosts = () => {
   const [jobPostings, setJobPostings] = useState([]);
+  const [otherJobPostings, setOtherJobPostings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editJob, setEditJob] = useState(null);
 
   useEffect(() => {
+    // Fetch job postings created by logged in users
     const fetchJobPostings = async () => {
       try {
         const token = localStorage.getItem("token");
@@ -28,6 +30,28 @@ const IndividualJobPosts = () => {
       }
     };
 
+    // Fetch job postings created by other users
+    const fetchOtherJobPostings = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const response = await axios.get(
+          "http://localhost:5000/other-job-postings", // Endpoint to retrieve other user's job postings
+          {
+            headers: {
+              Authorization: token,
+            },
+          }
+        );
+
+        setOtherJobPostings(response.data.job_postings);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching other job postings:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchOtherJobPostings();
     fetchJobPostings();
   }, []);
 
@@ -119,8 +143,8 @@ const IndividualJobPosts = () => {
                       </div>
                     ) : (
                       <div>
-                        <strong>Job Id:</strong> {job._id}
-                        <br />
+                        {/* <strong>Job Id:</strong> {job._id} */}
+                        {/* <br /> */}
                         <strong>Job Title:</strong> {job.job_title}
                         <br />
                         <strong>Status:</strong> {job.status}
@@ -142,6 +166,35 @@ const IndividualJobPosts = () => {
             )}
           </div>
         )}
+      </div>
+
+      <div>
+        {/* Display job postings by other users */}
+        <h2>Other Job Postings</h2>
+        <div>
+          {otherJobPostings.length > 0 ? (
+            <ul>
+              {otherJobPostings.map((otherJob) => (
+                <li key={otherJob._id}>
+                  {/* Render job postings from other users */}
+                  <strong>Job Title:</strong> {otherJob.job_title}
+                  <br />
+                  <strong>Status:</strong> {otherJob.status}
+                  <br />
+                  <strong>Start Date:</strong> {otherJob.start_date}
+                  <br />
+                  <strong>End Date:</strong> {otherJob.end_date}
+                  <br />
+                  {/* Add any other necessary information */}
+                  <br />
+                  <br />
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No other job postings available.</p>
+          )}
+        </div>
       </div>
     </section>
   );
