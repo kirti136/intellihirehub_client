@@ -7,6 +7,8 @@ import "./LoginForm.css"
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -22,7 +24,15 @@ const LoginForm = () => {
       alert(response.data.message)
       navigate('/home');
     } catch (error) {
-      console.error('Error during login:', error);
+      // alert(error.response.data.message)
+      if (error.response && (error.response.status === 400 || error.response.status === 401)) {
+        setErrorMessage(error.response.data.message);
+        setTimeout(() => {
+          setErrorMessage('');
+        }, 5000); // Clear the error message after 5 seconds
+      } else {
+        console.error('Error during registration:', error);
+      }
     }
   };
 
@@ -31,11 +41,12 @@ const LoginForm = () => {
       <div className="loginDiv" >
         <form onSubmit={handleSubmit}>
           <div className="input flex">
-            <input placeholder='Enter E-mail' type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} /><br />
+            <input placeholder='Enter E-mail' type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="input flex">
-            <input placeholder='Enter Password' type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} /><br /><br />
+            <input placeholder='Enter Password' type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <input className="btn flex" type="submit" value="Login" />
         </form>
         <div className='questionDiv'>

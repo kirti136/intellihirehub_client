@@ -44,21 +44,18 @@ const RegisterForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="input flex">
             <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder='Enter your name' /></div>
-          <br />
           <div className="input flex">
             <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your email' />
           </div>
-          <br />
           <div className="input flex">
             <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter your password' />
           </div>
-          <br /><br />
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <input className="btn flex" type="submit" value="Register" />
         </form>
         <div className='questionDiv'>
           <p>Already Registered? <Link className="navLink a" to={"/login"}>Login</Link></p>
         </div>
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </div>
     </section>
   );

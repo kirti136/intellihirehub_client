@@ -29,6 +29,7 @@
 .registerSection .inputDiv form {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
 }
 .registerSection .inputDiv form .input {
   width: 25rem;
