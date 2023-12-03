@@ -1,12 +1,11 @@
-import CreateJobPosting from "../components/JobPostings/CreateJobPosting/CreateJobPosting"
-import Profile from "../components/Profile/Profile"
+import Profile from "../components/Profile/Profile";
+
 function ProfilePage() {
-    return (
-        <section>
-            <Profile />
-            <CreateJobPosting />
-        </section>
-    )
+  return (
+    <section>
+      <Profile />
+    </section>
+  );
 }
 
-export default ProfilePage
+export default ProfilePage;

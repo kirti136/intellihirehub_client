@@ -1,8 +1,12 @@
+import JobPostingHomePage from "../components/JobPostings/JobPostingHomePage/JobPostingHomePage";
+import JobSeekerHomePage from "../components/JobSeekers/JobSeekerHomePage/JobSeekerHomePage";
 
 function HomePage() {
-    return (
-        <h1 style={{ padding: "20rem" }}>Welcome to home page</h1>
-    )
+  const role = localStorage.getItem("role");
+
+  return (
+    <>{role == "job seeker" ? <JobSeekerHomePage /> : <JobPostingHomePage />}</>
+  );
 }
 
-export default HomePage
+export default HomePage;
