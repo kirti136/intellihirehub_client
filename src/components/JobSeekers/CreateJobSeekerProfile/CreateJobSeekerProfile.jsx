@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./CreateJobSeekerProfile.css";
 
 const CreateJobSeekerProfile = () => {
   const [formData, setFormData] = useState({
@@ -55,7 +56,7 @@ const CreateJobSeekerProfile = () => {
   };
 
   return (
-    <section className="content">
+    <section className="createJobSeekerProfileSection  content">
       <div className="jobSeekerDiv">
         <h2>Create Your Profile</h2>
         <form onSubmit={handleSubmit}>
@@ -68,12 +69,12 @@ const CreateJobSeekerProfile = () => {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <br />
+
           <label>
             Status:
+            <br />
             <label>
-              Active
+              Active  
               <input
                 type="checkbox"
                 name="status"
@@ -83,7 +84,7 @@ const CreateJobSeekerProfile = () => {
               />
             </label>
             <label>
-              Inactive
+              Inactive 
               <input
                 type="checkbox"
                 name="status"
@@ -93,8 +94,7 @@ const CreateJobSeekerProfile = () => {
               />
             </label>
           </label>
-          <br />
-          <br />
+
           <label>
             Skills:
             <input
@@ -104,7 +104,6 @@ const CreateJobSeekerProfile = () => {
               onChange={handleChange}
             />
           </label>
-          <br />
           <label>
             Experience:
             <select
@@ -117,7 +116,7 @@ const CreateJobSeekerProfile = () => {
               <option value="Senior">Senior</option>
             </select>
           </label>
-          <br />
+
           <label>
             Bio:
             <textarea
@@ -126,7 +125,7 @@ const CreateJobSeekerProfile = () => {
               onChange={handleChange}
             ></textarea>
           </label>
-          <br />
+
           <label>
             Availability:
             <input
@@ -136,8 +135,10 @@ const CreateJobSeekerProfile = () => {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <button type="submit">Create Profile</button>
+
+          <button className="btn" type="submit">
+            Create Profile
+          </button>
         </form>
       </div>
     </section>

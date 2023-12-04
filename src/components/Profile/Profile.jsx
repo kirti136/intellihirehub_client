@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./profile.css";
-import CreateJobSeekerProfile from "../JobSeekers/CreateJobSeekerProfile/CreateJobSeekerProfile";
+// import CreateJobSeekerProfile from "../JobSeekers/CreateJobSeekerProfile/CreateJobSeekerProfile";
 
 const Profile = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -11,7 +11,7 @@ const Profile = () => {
     email: "",
   });
   const token = localStorage.getItem("token");
-  const role = localStorage.getItem("role");
+  // const role = localStorage.getItem("role");
 
   useEffect(() => {
     const fetchUserDetails = async () => {
@@ -120,9 +120,9 @@ const Profile = () => {
       ) : (
         <p>Please login to view your profile.</p>
       )}
-      <hr />
+      {/* <hr /> */}
 
-      {role == "job seeker" ? <CreateJobSeekerProfile /> : null}
+      {/* {role == "job seeker" ? <CreateJobSeekerProfile /> : null} */}
     </section>
   );
 };

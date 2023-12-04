@@ -1,0 +1,42 @@
+.createJobSeekerProfileSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.createJobSeekerProfileSection .jobSeekerDiv {
+  background-color: #f8f8f8;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  max-width: 90%;
+}
+.createJobSeekerProfileSection .jobSeekerDiv h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+.createJobSeekerProfileSection .jobSeekerDiv form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.createJobSeekerProfileSection .jobSeekerDiv form label {
+  font-weight: bold;
+  color: #444;
+}
+.createJobSeekerProfileSection .jobSeekerDiv form label input[type=text],
+.createJobSeekerProfileSection .jobSeekerDiv form label input[type=date],
+.createJobSeekerProfileSection .jobSeekerDiv form label textarea,
+.createJobSeekerProfileSection .jobSeekerDiv form label select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+.createJobSeekerProfileSection .jobSeekerDiv form label input[type=checkbox] {
+  margin-right: 25px;
+  margin-left: 10px;
+  transform: translateY(2px);
+}/*# sourceMappingURL=CreateJobSeekerProfile.css.map */

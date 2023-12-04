@@ -1,10 +1,11 @@
+import Main from "../../Main/Main";
 
 function JobSeekerHomePage() {
   return (
     <section className="content">
-        <div>JobSeekerHomePage</div>
+      <Main />
     </section>
-  )
+  );
 }
 
-export default JobSeekerHomePage
+export default JobSeekerHomePage;

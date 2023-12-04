@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./main.css";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsClipboard2Check } from "react-icons/bs";
-import StarRating from "../StarRating/StarRating";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -10,101 +9,110 @@ const Data = [
   {
     id: 1,
     image:
-      "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Beach Paradise",
-    location: "Tropical Island",
+      "https://media.istockphoto.com/id/932755326/photo/modern-office-buildings-made-of-glass-and-concret.webp?b=1&s=612x612&w=0&k=20&c=evemY5FN1nbVC_-7IHYjH2eGy8L3BvZtftCUj3hdNHs=",
+    companyName: "TechGlobe Solutions",
+    location: "Metropolis City",
     rating: 4.5,
-    price: 1000,
+    revenue: 2500000,
     description:
-      "Experience the ultimate beach getaway on a tropical island. Crystal-clear waters, white sandy beaches, and relaxation await you in this paradise.",
+      "TechGlobe Solutions is a leading tech firm specializing in innovative software solutions for various industries.",
+    additionalDetail: "Provides AI-driven solutions.",
   },
   {
     id: 2,
     image:
-      "https://images.pexels.com/photos/3889764/pexels-photo-3889764.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Mountain Retreat",
-    location: "Alpine Wonderland",
+      "https://media.istockphoto.com/id/503680362/photo/modern-office-architecture.jpg?s=612x612&w=0&k=20&c=oHGb0Hiv8dVqDfiTacymRFoy6kMhhZJu2YI3EzfWNq8=",
+    companyName: "DataVision Insights",
+    location: "Silicon Valley",
     rating: 4.7,
-    price: 1200,
+    revenue: 3200000,
     description:
-      "Escape to the serene mountains for a rejuvenating retreat. Hiking, fresh air, and breathtaking views make this the perfect getaway.",
+      "DataVision Insights provides cutting-edge analytics and data visualization tools for businesses.",
+    additionalDetail: "Offers real-time data analytics.",
   },
   {
     id: 3,
     image:
-      "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "City Exploration",
-    location: "Metropolis City",
+      "https://cdn.pixabay.com/photo/2021/03/29/12/16/stairs-6133971_640.jpg",
+    companyName: "InnoTech Innovations",
+    location: "Tech Hub City",
     rating: 4.2,
-    price: 800,
+    revenue: 1800000,
     description:
-      "Discover the vibrant city life with endless entertainment options. Explore museums, dine at top restaurants, and immerse yourself in culture.",
+      "InnoTech Innovations specializes in groundbreaking technology solutions for the modern world.",
+    additionalDetail: "Known for revolutionary IoT devices.",
   },
   {
     id: 4,
     image:
-      "https://images.pexels.com/photos/2374652/pexels-photo-2374652.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Historical Adventure",
-    location: "Ancient Ruins",
+      "https://cdn.pixabay.com/photo/2020/02/27/14/33/building-4884852_640.jpg",
+    companyName: "EcoSolutions Unlimited",
+    location: "Eco-Friendly Haven",
     rating: 4.6,
-    price: 1100,
+    revenue: 2100000,
     description:
-      "Step back in time and explore ancient ruins. Uncover the mysteries of the past and relive history in this captivating adventure.",
+      "EcoSolutions Unlimited offers sustainable and eco-friendly solutions for a greener planet.",
+    additionalDetail: "Provides solar-powered technology.",
   },
   {
     id: 5,
     image:
-      "https://images.pexels.com/photos/1817050/pexels-photo-1817050.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Wildlife Safari",
-    location: "African Savannah",
+      "https://cdn.pixabay.com/photo/2020/01/29/20/24/building-4803602_640.jpg",
+    companyName: "HealthTech Innovators",
+    location: "Healthcare Hub",
     rating: 4.9,
-    price: 1500,
+    revenue: 2900000,
     description:
-      "Embark on a thrilling safari in the African savannah. Witness majestic wildlife, from lions to elephants, in their natural habitat.",
+      "HealthTech Innovators pioneers advanced healthcare technology and medical breakthroughs.",
+    additionalDetail: "Develops personalized healthcare solutions.",
   },
   {
     id: 6,
     image:
-      "https://images.pexels.com/photos/1591362/pexels-photo-1591362.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Cultural Immersion",
-    location: "Historic Village",
+      "https://cdn.pixabay.com/photo/2013/03/20/17/00/office-95311_640.jpg",
+    companyName: "ArtTech Studios",
+    location: "Artistic Community",
     rating: 4.4,
-    price: 950,
+    revenue: 1900000,
     description:
-      "Immerse yourself in the rich cultural heritage of a historic village. Participate in local traditions, taste authentic cuisine, and learn the history.",
+      "ArtTech Studios combines art and technology to create unique digital experiences.",
+    additionalDetail: "Creates interactive digital art installations.",
   },
   {
     id: 7,
     image:
-      "https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Island Paradise",
-    location: "Exotic Archipelago",
+      "https://cdn.pixabay.com/photo/2014/11/13/23/34/transamerica-pyramid-530061_640.jpg",
+    companyName: "SpaceTech Explorations",
+    location: "Space Research Center",
     rating: 4.8,
-    price: 1400,
+    revenue: 2700000,
     description:
-      "Escape to an exotic archipelago for an unforgettable island paradise experience. Pristine beaches, water sports, and relaxation await.",
+      "SpaceTech Explorations pioneers exploration and innovation in space technology.",
+    additionalDetail: "Works on satellite communication systems.",
   },
   {
     id: 8,
     image:
-      "https://images.pexels.com/photos/723465/pexels-photo-723465.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Winter Wonderland",
-    location: "Snowy Mountains",
+      "https://media.istockphoto.com/id/1048358188/photo/modern-building-in-paris.jpg?s=612x612&w=0&k=20&c=xQKe6UpXIZhIHQJ-pwrOMm1KIQd74Xc6haT-UcVYEMc=",
+    companyName: "Futurist Innovations",
+    location: "Futuristic City",
     rating: 4.3,
-    price: 900,
+    revenue: 2000000,
     description:
-      "Embrace the beauty of winter in the snowy mountains. Ski down the slopes, build snowmen, and warm up by the fire in cozy cabins.",
+      "Futurist Innovations designs futuristic technology solutions for upcoming challenges.",
+    additionalDetail: "Focuses on augmented reality applications.",
   },
   {
     id: 9,
     image:
-      "https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=300",
-    destination: "Desert Adventure",
-    location: "Sahara Desert",
+      "https://media.istockphoto.com/id/1269677040/photo/modern-office-building-close-up-in-sunlight.jpg?s=612x612&w=0&k=20&c=417BUmeudFbM-CaXbDDCdwF-fyQxkmzF2fFwVybvZ4c=",
+    companyName: "EnergyWave Solutions",
+    location: "Renewable Energy Hub",
     rating: 4.5,
-    price: 1050,
+    revenue: 2400000,
     description:
-      "Experience the thrill of the Sahara Desert. Go on camel treks, camp under the stars, and witness the stunning landscapes of the desert.",
+      "EnergyWave Solutions develops innovative renewable energy solutions for a sustainable future.",
+    additionalDetail: "Specializes in wind energy projects.",
   },
 ];
 
@@ -119,10 +127,10 @@ function Main() {
   }, [isMounted]);
 
   return (
-    <section className="main container section">
+    <section className="main container  content">
       <div className="secTitle">
         <h3 data-aos="fade-up" className="title">
-          Most Visited Destination
+          Valuable Companies
         </h3>
       </div>
 
@@ -137,7 +145,7 @@ function Main() {
               </div>
               {/* Card Info */}
               <div className="cardInfo">
-                <h4 className="destination">{data.destination}</h4>
+                <h4 className="destination">{data.companyName}</h4>
                 <span className="continent flex">
                   <HiOutlineLocationMarker className="icon" />
                   <span className="name">{data.location}</span>
@@ -146,16 +154,16 @@ function Main() {
                 <div className="priceBox flex">
                   <div className="rating">
                     <span>
-                      <StarRating totalStars={5} initialRating={data.rating} />
-                      <small>{data.rating}</small>
+                      <p>{data.additionalDetail}</p>
+                      {/* <small>{data.rating}</small> */}
                     </span>
                   </div>
-                  <div className="price">
+                  {/* <div className="price">
                     <h5>
                       <strong>$</strong>
-                      {data.price}
+                      {data.revenue}
                     </h5>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="desc">

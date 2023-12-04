@@ -111,12 +111,13 @@
           border-bottom: 1.5px solid var(--greyText);
 
           .rating {
-            max-width: 150px;
+            max-width: 100%;
             display: flex;
             align-items: center;
-            justify-content: left;
-            margin-left: -15px;
-            font-size: 1.5rem;
+            justify-content: center;
+            // margin-left: -15px;
+            // font-size: 1.5rem;
+            height: 50px;
 
             small {
               text-align: center;

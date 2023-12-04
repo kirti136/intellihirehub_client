@@ -35,7 +35,7 @@ const AllJobPostings = () => {
   return (
     <section className="content">
       <div className="jobPostingsContainer">
-        <h2>All Job Postings</h2>
+        <h2 style={{textAlign:"center"}}>All Job Postings</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -55,16 +55,19 @@ const AllJobPostings = () => {
                     </div>
                     <div className="jobButtons">
                       {job.status === "Filled" ? (
-                        <p>Application Closed</p>
+                        <p style={{ fontWeight: "bold", color: "red" }}>
+                          Application Closed
+                        </p>
                       ) : (
                         <div>
                           <button
+                            className="btn"
                             onClick={() => handleApply(job._id, job.status)}
                           >
                             Apply
                           </button>
                           <br />
-                          <button>Details</button>
+                          <button className="btn">Details</button>
                         </div>
                       )}
                     </div>
