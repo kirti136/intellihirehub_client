@@ -127,7 +127,7 @@ function Main() {
   }, [isMounted]);
 
   return (
-    <section className="main container  content">
+    <section className="main container ">
       <div className="secTitle">
         <h3 data-aos="fade-up" className="title">
           Valuable Companies

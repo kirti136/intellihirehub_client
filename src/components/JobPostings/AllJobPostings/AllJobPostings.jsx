@@ -7,6 +7,7 @@ const AllJobPostings = () => {
   const [jobPostings, setJobPostings] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchJobPostings = async () => {
@@ -27,15 +28,17 @@ const AllJobPostings = () => {
 
   const handleApply = (jobId, status) => {
     // Redirect to Create Job Seeker Profile page with job ID if status is not 'Filled'
-    if (status !== "Filled") {
+    if (status !== "Filled" && token) {
       navigate(`/apply_jobs`);
+    } else {
+      alert("Unauthorized User");
     }
   };
 
   return (
     <section className="content">
       <div className="jobPostingsContainer">
-        <h2 style={{textAlign:"center"}}>All Job Postings</h2>
+        <h2 style={{ textAlign: "center" }}>All Job Postings</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (

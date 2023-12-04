@@ -1,0 +1,49 @@
+.jobSeekerHomePageSection {
+  text-align: center;
+  //   margin-top: 50px;
+
+  .job-posting-header {
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #555;
+    }
+  }
+
+  .job-posting-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    .job-posting-option {
+      text-align: center;
+      margin: 0 20px;
+
+      a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #007bff;
+        }
+
+        .option-icon {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

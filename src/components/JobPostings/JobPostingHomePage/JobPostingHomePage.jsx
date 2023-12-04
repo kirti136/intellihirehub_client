@@ -20,7 +20,6 @@ const JobPostingHomePage = () => {
             <h3>Create Job Posting</h3>
           </Link>
         </div>
-        {/* Add more options for hiring managers */}
       </div>
     </section>
   );

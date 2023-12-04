@@ -1,1 +1,38 @@
-/*# sourceMappingURL=JobSeekerHomePage.css.map */
+.jobSeekerHomePageSection {
+  text-align: center;
+}
+.jobSeekerHomePageSection .job-posting-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.jobSeekerHomePageSection .job-posting-header p {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+.jobSeekerHomePageSection .job-posting-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.jobSeekerHomePageSection .job-posting-options .job-posting-option {
+  text-align: center;
+  margin: 0 20px;
+}
+.jobSeekerHomePageSection .job-posting-options .job-posting-option a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.jobSeekerHomePageSection .job-posting-options .job-posting-option a:hover {
+  color: #007bff;
+}
+.jobSeekerHomePageSection .job-posting-options .job-posting-option a .option-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.jobSeekerHomePageSection .job-posting-options .job-posting-option a h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}/*# sourceMappingURL=JobSeekerHomePage.css.map */

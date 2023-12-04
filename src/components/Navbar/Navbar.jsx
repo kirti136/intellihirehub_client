@@ -27,7 +27,8 @@ function Navbar() {
 
   return (
     <section className="navbarSection">
-      {role == "job seeker" ? (
+      {role == "hiring manager" ? (
+        // hiringmanger
         <header className="header flex">
           <div className="logoDiv">
             <Link to={"/"} className="logo flex a">
@@ -46,13 +47,13 @@ function Navbar() {
                 </Link>
               </li>
               <li className="navItem">
-                <Link to={"/all_job_posts"} className="navLink a">
-                  Applications
+                <Link to={"/create_job"} className="navLink a">
+                  Create
                 </Link>
               </li>
               <li className="navItem">
-                <Link to={"/"} className="navLink a">
-                  Apply
+                <Link to={"/individual_job_posts"} className="navLink a">
+                  My Postings
                 </Link>
               </li>
               <li className="navItem">
@@ -102,6 +103,7 @@ function Navbar() {
           </div>
         </header>
       ) : (
+        // job seeker
         <header className="header flex">
           <div className="logoDiv">
             <Link to={"/"} className="logo flex a">
@@ -120,13 +122,13 @@ function Navbar() {
                 </Link>
               </li>
               <li className="navItem">
-                <Link to={"/create_job"} className="navLink a">
-                  Create
+                <Link to={"/all_job_posts"} className="navLink a">
+                  Applications
                 </Link>
               </li>
               <li className="navItem">
-                <Link to={"/individual_job_posts"} className="navLink a">
-                  My Postings
+                <Link to={"/"} className="navLink a">
+                  Apply
                 </Link>
               </li>
               <li className="navItem">

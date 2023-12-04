@@ -25,7 +25,7 @@
   width: -moz-max-content;
   width: max-content;
   color: var(--textColor);
-  margin: 1rem 0;
+  margin: 4rem 0 2rem 0;
   z-index: 2;
 }
 .main .secTitle .title::after {
