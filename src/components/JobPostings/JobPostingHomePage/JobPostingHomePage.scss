@@ -1,0 +1,67 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 225);
+}
+
+.jobPostingHomePage {
+  text-align: center;
+  //   margin-top: 50px;
+
+  .job-posting-header {
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #555;
+    }
+  }
+
+  .job-posting-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    .job-posting-option {
+      text-align: center;
+      margin: 0 20px;
+
+      a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #007bff;
+        }
+
+        .option-icon {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
