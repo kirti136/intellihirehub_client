@@ -8,6 +8,8 @@ import Footer from "./components/Footer/Footer";
 import ProfilePage from "./pages/ProfilePage";
 import CreateJobPosting from "./components/JobPostings/CreateJobPosting/CreateJobPosting";
 import IndividualJobPosts from "./components/JobPostings/IndividualJobPosts/IndividualJobPosts";
+import AllJobPostings from "./components/JobPostings/AllJobPostings/AllJobPostings";
+import CreateJobSeekerProfile from "./components/JobSeekers/CreateJobSeekerProfile/CreateJobSeekerProfile";
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/create_job" element={<CreateJobPosting />} />
         <Route path="/individual_job_posts" element={<IndividualJobPosts />} />
+        <Route path="/all_job_posts" element={<AllJobPostings />} />
+        <Route path="/apply_jobs" element={<CreateJobSeekerProfile />} />
       </Routes>
       <Footer />
     </div>

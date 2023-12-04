@@ -1,0 +1,24 @@
+.jobPostingsContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.jobPostingsContainer .jobList ul {
+  list-style: none;
+  padding: 0;
+}
+.jobPostingsContainer .jobList ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.jobPostingsContainer .jobList ul li .jobDetails {
+  flex: 1;
+}
+.jobPostingsContainer .jobList ul li .jobButtons {
+  flex-basis: 30%;
+}
+.jobPostingsContainer .jobList ul li .jobButtons button {
+  margin-bottom: 5px;
+}/*# sourceMappingURL=AllJobPostings.css.map */

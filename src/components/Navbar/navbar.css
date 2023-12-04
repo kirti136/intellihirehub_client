@@ -39,7 +39,7 @@
   color: var(--PrimaryColor);
   transform: translateY(5px);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .header .navBar {
     position: absolute;
     background: var(--whiteColorDeam);
@@ -101,7 +101,7 @@
   color: var(--SecondaryColor);
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 801px) {
   .toggleNavbar,
   .closeNavbar {
     display: none;

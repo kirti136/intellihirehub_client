@@ -46,8 +46,8 @@ function Navbar() {
                 </Link>
               </li>
               <li className="navItem">
-                <Link to={"/"} className="navLink a">
-                  Job Applications
+                <Link to={"/all_job_posts"} className="navLink a">
+                  Applications
                 </Link>
               </li>
               <li className="navItem">
