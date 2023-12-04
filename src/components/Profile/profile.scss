@@ -28,10 +28,13 @@
   padding: 8rem 1rem 5rem 1rem;
 
   .profileDiv {
+    border-radius: 5px;
+    background:var(--whiteColorDeam);
     width: 80%;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     .details {
       p {
@@ -40,11 +43,11 @@
 
       .btn {
         position: absolute;
-        top: 100px;
-        right: 10px;
+        top: 125px;
+        right:20px;
         color: white;
         font-size: medium;
-        background: var(--gradientColorButton);
+        background: var(--gradientColor);
       }
     }
 
@@ -73,7 +76,7 @@
         .btn {
           color: white;
           font-size: medium;
-          background: var(--gradientColorButton);
+          background: var(--gradientColor);
         }
       }
     }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./CreateJobPosting.css"
 
 const CreateJobPosting = () => {
   const [jobTitle, setJobTitle] = useState("");
@@ -52,7 +53,7 @@ const CreateJobPosting = () => {
       }
     }
   };
-
+ 
   return (
     <section className="createJobPostingSection content">
       <div className="jobPostingDiv">
@@ -96,7 +97,7 @@ const CreateJobPosting = () => {
           </label>
           <br />
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-          <button type="submit">Create Job Posting</button>
+          <button className="btn" type="submit">Create Job Posting</button>
         </form>
       </div>
     </section>
