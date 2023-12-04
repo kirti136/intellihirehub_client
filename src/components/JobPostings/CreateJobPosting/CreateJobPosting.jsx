@@ -15,7 +15,7 @@ const CreateJobPosting = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:5000/create-job-posting",
+        "https://intellihirehub-server.vercel.app/create-job-posting",
         {
           job_title: jobTitle,
           status: status,

@@ -18,7 +18,7 @@ const Profile = () => {
       try {
         if (token) {
           const response = await axios.get(
-            "http://localhost:5000/user-details",
+            "https://intellihirehub-server.vercel.app/user-details",
             {
               headers: {
                 Authorization: `${token}`,
@@ -53,7 +53,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       const response = await axios.patch(
-        "http://localhost:5000/user-details",
+        "https://intellihirehub-server.vercel.app/user-details",
         formData,
         {
           headers: {

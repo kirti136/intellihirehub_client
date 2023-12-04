@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./IndividualJobPosts.css";
 
 const IndividualJobPosts = () => {
   const [jobPostings, setJobPostings] = useState([]);
@@ -13,7 +14,7 @@ const IndividualJobPosts = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:5000/my-job-postings",
+          "https://intellihirehub-server.vercel.app/my-job-postings",
           {
             headers: {
               Authorization: token,
@@ -35,7 +36,7 @@ const IndividualJobPosts = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:5000/other-job-postings", // Endpoint to retrieve other user's job postings
+          "https://intellihirehub-server.vercel.app/other-job-postings", // Endpoint to retrieve other user's job postings
           {
             headers: {
               Authorization: token,
@@ -90,8 +91,8 @@ const IndividualJobPosts = () => {
   };
 
   return (
-    <section className="content">
-      <div>
+    <section className="IndividualJobPostSection content">
+      <div className="myJobPostings">
         <h2>My Job Postings</h2>
         {loading ? (
           <p>Loading...</p>
@@ -135,10 +136,18 @@ const IndividualJobPosts = () => {
                             name="endDate"
                             defaultValue={job.end_date}
                           />
-                          <button type="submit">Update</button>
-                          <button type="button" onClick={handleCancelEdit}>
-                            Cancel
-                          </button>
+                          <div className="buttonDiv">
+                            <button className="btn" type="submit">
+                              Update
+                            </button>
+                            <button
+                              className="btn"
+                              type="button"
+                              onClick={handleCancelEdit}
+                            >
+                              Cancel
+                            </button>
+                          </div>
                         </form>
                       </div>
                     ) : (
@@ -152,12 +161,11 @@ const IndividualJobPosts = () => {
                         <strong>Start Date:</strong> {job.start_date}
                         <br />
                         <strong>End Date:</strong> {job.end_date}
-                        <br />
-                        <button onClick={() => handleEdit(job)}>Edit</button>
+                        <button className="btn" onClick={() => handleEdit(job)}>
+                          Edit
+                        </button>
                       </div>
                     )}
-                    <br />
-                    <br />
                   </li>
                 ))}
               </ul>
@@ -168,7 +176,7 @@ const IndividualJobPosts = () => {
         )}
       </div>
 
-      <div>
+      <div className="OtherssJobPosting">
         {/* Display job postings by other users */}
         <h2>Other Job Postings</h2>
         <div>

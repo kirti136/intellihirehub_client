@@ -37,7 +37,7 @@ const CreateJobSeekerProfile = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:5000/create-job-seeker-profile",
+        "https://intellihirehub-server.vercel.app/create-job-seeker-profile",
         formData,
         {
           headers: {

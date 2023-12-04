@@ -1,1 +1,77 @@
-/*# sourceMappingURL=IndividualJobPosts.css.map */
+.IndividualJobPostSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.IndividualJobPostSection .myJobPostings,
+.IndividualJobPostSection .OtherssJobPosting {
+  border: 1px solid #ccc;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.IndividualJobPostSection .myJobPostings h2,
+.IndividualJobPostSection .OtherssJobPosting h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.IndividualJobPostSection .myJobPostings ul,
+.IndividualJobPostSection .OtherssJobPosting ul {
+  list-style-type: none;
+  padding: 0;
+}
+.IndividualJobPostSection .myJobPostings ul li,
+.IndividualJobPostSection .OtherssJobPosting ul li {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  padding: 40px;
+}
+.IndividualJobPostSection .myJobPostings ul li strong,
+.IndividualJobPostSection .OtherssJobPosting ul li strong {
+  font-weight: bold;
+}
+.IndividualJobPostSection .myJobPostings ul li .buttonDiv,
+.IndividualJobPostSection .OtherssJobPosting ul li .buttonDiv {
+  display: flex;
+  gap: 10px;
+}
+.IndividualJobPostSection .myJobPostings ul li button.btn,
+.IndividualJobPostSection .OtherssJobPosting ul li button.btn {
+  float: right;
+  color: #fff;
+  border: none;
+}
+.IndividualJobPostSection .myJobPostings ul li form,
+.IndividualJobPostSection .OtherssJobPosting ul li form {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.IndividualJobPostSection .myJobPostings ul li form input,
+.IndividualJobPostSection .myJobPostings ul li form select,
+.IndividualJobPostSection .OtherssJobPosting ul li form input,
+.IndividualJobPostSection .OtherssJobPosting ul li form select {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 1;
+}
+.IndividualJobPostSection .myJobPostings ul li form input:last-child,
+.IndividualJobPostSection .myJobPostings ul li form select:last-child,
+.IndividualJobPostSection .OtherssJobPosting ul li form input:last-child,
+.IndividualJobPostSection .OtherssJobPosting ul li form select:last-child {
+  margin-right: 0;
+}
+.IndividualJobPostSection .myJobPostings ul li form button.btn,
+.IndividualJobPostSection .OtherssJobPosting ul li form button.btn {
+  float: none;
+}
+.IndividualJobPostSection .myJobPostings p,
+.IndividualJobPostSection .OtherssJobPosting p {
+  font-style: italic;
+}/*# sourceMappingURL=IndividualJobPosts.css.map */

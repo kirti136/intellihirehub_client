@@ -12,7 +12,7 @@ const AllJobPostings = () => {
     const fetchJobPostings = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/all-job-postings"
+          "https://intellihirehub-server.vercel.app/all-job-postings"
         );
         setJobPostings(response.data.job_postings);
         setLoading(false);
