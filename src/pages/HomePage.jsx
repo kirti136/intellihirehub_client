@@ -5,7 +5,13 @@ function HomePage() {
   const role = localStorage.getItem("role");
 
   return (
-    <>{role == "job seeker" ? <JobSeekerHomePage /> : <JobPostingHomePage />}</>
+    <>
+      {role == "hiring manager" ? (
+        <JobPostingHomePage />
+      ) : (
+        <JobSeekerHomePage />
+      )}
+    </>
   );
 }
 
