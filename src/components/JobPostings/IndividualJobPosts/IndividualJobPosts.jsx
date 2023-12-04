@@ -68,7 +68,7 @@ const IndividualJobPosts = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:5000/update-job-posting/${jobId}`,
+        `https://intellihirehub-server.vercel.app/update-job-posting/${jobId}`,
         updatedData,
         {
           headers: {
