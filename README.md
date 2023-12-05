@@ -1,7 +1,4 @@
 # IntelliHireHub-Client
-![Logo](https://github.com/kirti136/intellihirehub_client/blob/main/src/assets/logo.png?raw=true)
-
-## Overview
 
 The IntelliHireHub-Client is the frontend part of the IntelliHireHub web application, designed to revolutionize the way candidates are connected with suitable job opportunities. This application leverages full-stack web technologies to facilitate seamless interactions between job seekers and hiring managers.
 
